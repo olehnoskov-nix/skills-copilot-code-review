@@ -23,11 +23,17 @@
           </button>
           <div id="user-info" class="hidden">
             <span id="display-name"></span>
+            <button id="manage-announcements-button" class="icon-button">
+              <span aria-hidden="true">📣</span>
+              <span>Announcements</span>
+            </button>
             <button id="logout-button">Logout</button>
           </div>
         </div>
       </div>
     </header>
+
+    <section id="announcement-banner" class="announcement-banner hidden" aria-live="polite"></section>
 
     <main>
       <section id="activities-container">
@@ -131,6 +137,57 @@
           <button type="submit">Login</button>
         </form>
         <div id="login-message" class="hidden message"></div>
+      </div>
+    </div>
+
+    <!-- Announcement management modal -->
+    <div id="announcements-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="announcements-heading">
+      <div class="modal-content announcement-modal-content">
+        <button id="close-announcements-modal" class="modal-close-button" type="button" aria-label="Close announcements">&times;</button>
+        <div class="announcement-modal-heading">
+          <span class="announcement-heading-icon" aria-hidden="true">📣</span>
+          <div>
+            <h3 id="announcements-heading">Announcements</h3>
+            <p>Keep families and students up to date.</p>
+          </div>
+        </div>
+        <div class="announcement-manager-layout">
+          <section class="announcement-list-panel" aria-labelledby="announcement-list-heading">
+            <div class="announcement-panel-heading">
+              <h4 id="announcement-list-heading">All announcements</h4>
+              <button id="new-announcement-button" type="button" class="secondary-button">+ New</button>
+            </div>
+            <div id="announcement-list" class="announcement-list" aria-live="polite"></div>
+          </section>
+          <section class="announcement-form-panel" aria-labelledby="announcement-form-heading">
+            <h4 id="announcement-form-heading">New announcement</h4>
+            <form id="announcement-form">
+              <div class="form-group">
+                <label for="announcement-title">Title</label>
+                <input type="text" id="announcement-title" maxlength="100" required placeholder="e.g. Spring concert" />
+              </div>
+              <div class="form-group">
+                <label for="announcement-message">Message</label>
+                <textarea id="announcement-message" rows="4" maxlength="1000" required placeholder="Share the important details..."></textarea>
+              </div>
+              <div class="announcement-date-fields">
+                <div class="form-group">
+                  <label for="announcement-start-date">Start date <span>(optional)</span></label>
+                  <input type="date" id="announcement-start-date" />
+                </div>
+                <div class="form-group">
+                  <label for="announcement-expiration-date">Expiration date</label>
+                  <input type="date" id="announcement-expiration-date" required />
+                </div>
+              </div>
+              <p id="announcement-form-message" class="announcement-form-message hidden" role="status"></p>
+              <div class="announcement-form-actions">
+                <button id="cancel-announcement-edit" type="button" class="secondary-button hidden">Cancel edit</button>
+                <button id="save-announcement-button" type="submit">Publish announcement</button>
+              </div>
+            </form>
+          </section>
+        </div>
       </div>
     </div>
 
