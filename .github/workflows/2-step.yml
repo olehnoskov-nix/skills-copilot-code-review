@@ -3,7 +3,9 @@ name: Step 2
 on:
   pull_request:
     types:
-      - review_requested
+      - opened
+      - reopened
+      - synchronize
 
 permissions:
   contents: write
@@ -54,18 +56,6 @@ jobs:
           file: exercise-toolkit/markdown-templates/step-feedback/checking-work.md
           edit-mode: replace
 
-      - name: Check if a reviewer is assigned
-        id: check-reviewer
-        env:
-          REVIEWER_LOGIN: ${{ github.event.requested_reviewer.login }}
-        run: |
-          if [[ -n "${REVIEWER_LOGIN}" ]]; then
-            echo "A reviewer is assigned: ${REVIEWER_LOGIN}."
-          else
-            echo "No reviewer was assigned."
-            exit 1
-          fi
-
       - name: Update comment - step results
         uses: GrantBirki/comment@v2.1.1
         with:
@@ -77,8 +67,8 @@ jobs:
           vars: |
             step_number: 2
             results_table:
-              - description: "Requested a pull request review"
-                passed: ${{ steps.check-reviewer.outcome == 'success' }}
+              - description: "Created a pull request"
+                passed: ${{ github.event.pull_request != null }}
 
       - name: Fail job if not all checks passed
         if: contains(steps.*.outcome, 'failure')
