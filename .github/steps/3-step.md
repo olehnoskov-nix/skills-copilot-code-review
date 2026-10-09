@@ -127,23 +127,13 @@ Let's create specific Copilot's review considerations for the frontend and backe
 > [!TIP]
 > VS Code has a built-in commands to help manage instructions. Try opening the command pallette and searching for `instructions`.
 
-### ⌨️ Activity: Request another review
+### ⌨️ Activity: Submit your instructions
 
-With our new instructions defined, Copilot now has a better idea of what is important for our project. Let's ask for another review.
+With our new instructions defined, Copilot now has a better idea of what is important for our project.
 
-1. In VS Code, Ensure the instructions are indeed committed and push to the repository.
+1. In VS Code, ensure the instruction files are committed and push them to the repository. The workflow checks your changes automatically; you do not need to request or receive a review.
 
-1. In the web browser, return to the recently created pull request.
-
-1. In the top right, find the **Reviewers** menu and **Re-request review** button next to **Copilot**. Click it and wait a moment for Copilot to add comments on the pull request.
-
-   <img width="300" alt="screenshot of re-review button" src="https://github.com/user-attachments/assets/c45aa8de-278d-46e7-bfe2-2dc6b574e11e"/>
-
-   > 🪧 **Note:** If you are too quick after pushing new commits, you may have to wait a moment for the button to appear, or refresh the page.
-
-1. Observe that Copilot's feedback now differs from the previous review.
-
-1. With the review requested, wait a moment for Mona to check your work, provide feedback, and share the next lesson.
+1. Wait for Mona to check your work, provide feedback, and share the next lesson.
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>

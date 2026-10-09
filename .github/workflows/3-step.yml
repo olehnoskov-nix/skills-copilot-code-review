@@ -3,7 +3,7 @@ name: Step 3
 on:
   pull_request:
     types:
-      - review_requested
+      - synchronize
 
 permissions:
   contents: write
