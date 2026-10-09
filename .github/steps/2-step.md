@@ -30,7 +30,7 @@ For more information, see the [GitHub Copilot code review documentation](https:/
    - **target:** `main`
    - **title:** `Add announcement banner`
 
-1. In the right-side details area, find the **Reviewers** menu. Click on the **settings icon** to show a list of available reviewers and select **Copilot**.
+1. In the right-side details area, find the **Reviewers** menu. Click on the **settings icon** to show a list of available reviewers and select **Copilot**. If Copilot isn't available on your plan, request a review from any available reviewer instead; this will let you continue the exercise, though it won't provide a Copilot review.
 
    <img width="300" alt="screenshot of reviewers menu" src="https://github.com/user-attachments/assets/0f9f2e86-51b7-4542-82a1-afb6a22ab3ca"/>
 
@@ -45,8 +45,8 @@ For more information, see the [GitHub Copilot code review documentation](https:/
 <details>
 <summary>Having trouble? 🤷</summary><br/>
 
-- If Copilot doesn't appear in the reviewers list, ensure your repository has Copilot enabled
-- If Copilot doesn't appear in the reviewers list, check your subscription plan. It is not available for free tier.
+- If Copilot doesn't appear in the reviewers list, ensure your repository has Copilot enabled and that your plan supports Copilot code review.
+- If you use the Free tier or can't select Copilot, request a review from any available reviewer to complete this step and continue.
 - Sometimes reviews take a minute or two to complete.
 
 </details>
